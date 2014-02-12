@@ -1,0 +1,14 @@
+<?php
+
+function google_code_prettify_library_info() {
+  $libraries['google_code_prettify'] = array(
+    'title' => 'Google Code Prettify',
+    'website' => 'https://code.google.com/p/google-code-prettify/',
+    //no idea if that is correct, it's probably not, I can't seem to find this documented....
+    'version' => '1.0',
+    'js' => array(
+      drupal_get_path('module', 'google_code_prettify') . '/lib/google-code-prettify/prettify.js' => array(),
+      drupal_get_path('module', 'google_code_prettify') . '/lib/google-code-prettify/run_prettify.js' => array(),
+    ),
+  );
+}

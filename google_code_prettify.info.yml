@@ -1,0 +1,6 @@
+name: Google Code Prettify
+description: 'Implements the Google Code Prettify library in Drupal'
+package: Code Highlighting
+type: module
+version: 0.1
+core: 8.x
