@@ -11,4 +11,19 @@ function google_code_prettify_library_info() {
       drupal_get_path('module', 'google_code_prettify') . '/lib/google-code-prettify/run_prettify.js' => array(),
     ),
   );
+  return $libraries;
+}
+
+/**
+ * @inheritdoc
+ */
+function google_code_prettify_preprocess_html(&$variables) {
+  $libraries = array(
+    '#attached' => array(
+      'library' => array(
+        array('google_code_prettify','google_code_prettify'),
+      ),
+    ),
+  );
+  drupal_render($libraries);
 }
